@@ -6,7 +6,7 @@ import Dropdown from './UI/Dropdown';
 function App() {
   return (
     <div className="App">
-      <TextField placeholderText="" />
+      <TextField />
       <Dropdown title="Сколько гостей" options={['спальни', 'кровати', 'ванные комнаты']} />
     </div>
   );
