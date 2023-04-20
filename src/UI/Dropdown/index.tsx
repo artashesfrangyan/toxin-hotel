@@ -7,26 +7,24 @@ const Dropdown: React.FC<{ title: string; options: string[] }> = ({ title, optio
   const [count, setCount] = React.useState<number[]>([]);
 
   function onCLickMinus(index: number) {
-    if (!count[index]) return
+    if (!count[index]) return;
     const newCount = count.slice();
     newCount[index] -= 1;
-    setCount(newCount)
+    setCount(newCount);
   }
 
   function onCLickPlus(index: number) {
     const newCount = count.slice();
     !newCount[index] && (newCount[index] = 0);
     newCount[index] += 1;
-    setCount(newCount)
+    setCount(newCount);
   }
 
   return (
     <div className={clsx(styles.dropdown, open && styles.dropdownOpen)}>
       <div className={styles.title} onClick={() => setOpen(!open)}>
         <span>{title}</span>
-        <button className={styles.expand}>
-          expand_more
-        </button>
+        <button className={styles.expand}>expand_more</button>
       </div>
       {open && (
         <div className={styles.options}>
